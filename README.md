@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Smash Karts Farcaster Frame
 
-## Getting Started
+A Farcaster Frame that embeds the Smash Karts game, allowing users to play directly within the Farcaster app.
 
-First, run the development server:
+## Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This frame is deployed at [https://smash-karts-frame.vercel.app](https://smash-karts-frame.vercel.app) and can be embedded in Farcaster casts.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Embedding of the Smash Karts game from CrazyGames
+- Responsive design that works well on mobile devices
+- Frame metadata for seamless Farcaster integration
+- Webhook API endpoint for handling Farcaster events
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies Used
 
-## Learn More
+- Next.js 15+ with App Router
+- Tailwind CSS for styling
+- Farcaster Frame SDK
+- TypeScript
 
-To learn more about Next.js, take a look at the following resources:
+## Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) to view the app
 
-## Deploy on Vercel
+### Frame Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `app/layout.tsx` - Contains the Farcaster Frame metadata
+- `app/page.tsx` - Landing page with game info and Play button
+- `app/game/page.tsx` - Game page container component
+- `app/game/GameFrame.tsx` - The component that loads the game iframe
+- `app/api/webhook/route.ts` - Webhook endpoint for Farcaster events
+- `public/.well-known/farcaster.json` - Farcaster manifest file
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+This project is configured for deployment on Vercel. Simply connect your GitHub repository to Vercel and deploy.
+
+## License
+
+MIT

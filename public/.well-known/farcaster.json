@@ -1,0 +1,26 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjQ5NDM2MywidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDIwNzEzZjBGQjZGQjk0N0JCMDg2MGE4MzYxM2QxMzdEOWQwYWEwNTIifQ",
+    "payload": "eyJkb21haW4iOiJzbWFzaC1rYXJ0cy1mcmFtZS52ZXJjZWwuYXBwIn0",
+    "signature": "MHg2OGU0NGViOWFiNDE0OGFmN2I2NjZiNjk1YjY5NGRiNjAxMjU5MDU2YWExNTM3NGYwOTdlODcxNGJjNWIxMmViNGVlYjc5YzI2N2NkZDRmYmFlNjY2N2I5YWViNzgxZGFhOTMzMzI0MjE3MjYwZjMzYWM5NWJhZTk2MWIwNmU5ZTFj"
+  },
+  "frame": {
+    "version": "1",
+    "name": "Smash Karts",
+    "iconUrl": "https://smash-karts-frame.vercel.app/icon.png",
+    "homeUrl": "https://smash-karts-frame.vercel.app",
+    "imageUrl": "https://smash-karts-frame.vercel.app/image.png",
+    "buttonTitle": "Play Smash Karts",
+    "splashImageUrl": "https://smash-karts-frame.vercel.app/splash.png",
+    "splashBackgroundColor": "#4f46e5",
+    "webhookUrl": "https://smash-karts-frame.vercel.app/api/webhook"
+  },
+  "triggers": [
+    {
+      "type": "cast",
+      "id": "play-smash-karts",
+      "url": "https://smash-karts-frame.vercel.app/game",
+      "name": "Play Smash Karts"
+    }
+  ]
+}
