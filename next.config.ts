@@ -19,11 +19,12 @@ const nextConfig: NextConfig = {
               media-src 'self' https://*.crazygames.com;
               worker-src 'self' blob:;
               child-src 'self' blob:;
+              frame-ancestors 'self' https://*.farcaster.xyz https://*.warpcast.com;
             `.replace(/\s+/g, ' ').trim()
           },
           {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN'
+            key: 'Access-Control-Allow-Origin',
+            value: '*'
           }
         ]
       }

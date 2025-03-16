@@ -71,15 +71,15 @@ export default function GameFrame() {
       )}
 
       {/* Game iframe */}
-      <iframe
-        ref={iframeRef}
-        src="https://www.crazygames.com/embed/smash-karts"
-        className="w-full h-full border-none"
-        allow="accelerometer; autoplay; camera; clipboard-write; encrypted-media; fullscreen; gyroscope; microphone; picture-in-picture; web-share"
-        allowFullScreen
-        sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts"
-        onLoad={handleIframeLoad}
-      ></iframe>
+<iframe
+  ref={iframeRef}
+  src="https://www.crazygames.com/embed/smash-karts"
+  className="w-full h-full border-none"
+  allow="accelerometer; autoplay; camera; clipboard-write; encrypted-media; fullscreen; gamepad; gyroscope; microphone; picture-in-picture; web-share; xr-spatial-tracking"
+  allowFullScreen
+  sandbox="allow-scripts allow-same-origin allow-popups allow-presentation allow-orientation-lock"
+  onLoad={handleIframeLoad}
+></iframe>
 
       {/* Controls overlay */}
       <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-4 z-20">
