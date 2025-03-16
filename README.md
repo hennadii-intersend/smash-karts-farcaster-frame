@@ -1,10 +1,10 @@
 # Smash Karts Farcaster Frame
 
-A Farcaster Frame that embeds the Smash Karts game, allowing users to play directly within the Farcaster app.
+A Farcaster Frame that embeds the Smash Karts game, allowing users to play directly within the Farcaster app. Includes both a React-based implementation and an HTML-based implementation for maximum compatibility with iOS devices.
 
 ## Demo
 
-This frame is deployed at [https://smash-karts-frame.vercel.app](https://smash-karts-frame.vercel.app) and can be embedded in Farcaster casts.
+This frame is deployed at [https://smash-karts-farcaster-frame.vercel.app](https://smash-karts-farcaster-frame.vercel.app) and can be embedded in Farcaster casts.
 
 ## Features
 
@@ -37,12 +37,18 @@ This frame is deployed at [https://smash-karts-frame.vercel.app](https://smash-k
 
 ### Frame Structure
 
+#### React Implementation
 - `app/layout.tsx` - Contains the Farcaster Frame metadata
-- `app/page.tsx` - Landing page with game info and Play button
+- `app/page.tsx` - Landing page with game info and Play button options
 - `app/game/page.tsx` - Game page container component
-- `app/game/GameFrame.tsx` - The component that loads the game iframe
+- `app/game/GameFrame.tsx` - The component that loads the game iframe with Farcaster SDK
+- `app/game/simple-iframe.tsx` - A simplified iframe implementation with better iOS compatibility
 - `app/api/webhook/route.ts` - Webhook endpoint for Farcaster events
 - `public/.well-known/farcaster.json` - Farcaster manifest file
+
+#### HTML Implementation
+- `public/index.html` - Static HTML page with proper Frame v2 metadata
+- `public/direct-game.html` - Direct HTML implementation of the game iframe
 
 ## Deployment
 
