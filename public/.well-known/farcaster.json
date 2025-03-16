@@ -2,25 +2,17 @@
   "accountAssociation": {
     "header": "eyJmaWQiOjQ5NDM2MywidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDIwNzEzZjBGQjZGQjk0N0JCMDg2MGE4MzYxM2QxMzdEOWQwYWEwNTIifQ",
     "payload": "eyJkb21haW4iOiJzbWFzaC1rYXJ0cy1mYXJjYXN0ZXItZnJhbWUudmVyY2VsLmFwcCJ9",
-    "signature": "MHg2OGU0NGViOWFiNDE0OGFmN2I2NjZiNjk1YjY5NGRiNjAxMjU5MDU2YWExNTM3NGYwOTdlODcxNGJjNWIxMmViNGVlYjc5YzI2N2NkZDRmYmFlNjY2N2I5YWViNzgxZGFhOTMzMzI0MjE3MjYwZjMzYWM5NWJhZTk2MWIwNmU5ZTFj"
+    "signature": "MHhiZDIzMmI2NTU1NDU2OTkzNGM2NThlZjExZjAxMjY4OTM5YTY1N2UzMzdjMDNkM2FiNjRmMzY2OTRjODZhMzdmMjE3ZGNkMzQzZTBjMjJlNGYyYWFkZmZmNjVhYzg1N2M3ZGY5MzgzN2QyOTgzNDI4MDMxZDdiMjcwY2RhZDVhNjFi"
   },
   "frame": {
     "version": "1",
-    "name": "Smash Karts",
+    "name": "Example Frame",
     "iconUrl": "https://smash-karts-farcaster-frame.vercel.app/icon.png",
     "homeUrl": "https://smash-karts-farcaster-frame.vercel.app",
     "imageUrl": "https://smash-karts-farcaster-frame.vercel.app/image.png",
-    "buttonTitle": "Play Smash Karts",
+    "buttonTitle": "Check this out",
     "splashImageUrl": "https://smash-karts-farcaster-frame.vercel.app/splash.png",
-    "splashBackgroundColor": "#4f46e5",
+    "splashBackgroundColor": "#eeccff",
     "webhookUrl": "https://smash-karts-farcaster-frame.vercel.app/api/webhook"
-  },
-  "triggers": [
-    {
-      "type": "cast",
-      "id": "play-smash-karts",
-      "url": "https://smash-karts-farcaster-frame.vercel.app/game",
-      "name": "Play Smash Karts"
-    }
-  ]
+  }
 }
