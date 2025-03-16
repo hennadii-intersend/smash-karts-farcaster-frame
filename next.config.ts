@@ -11,12 +11,12 @@ const nextConfig: NextConfig = {
             key: 'Content-Security-Policy',
             value: `
               default-src 'self';
-              script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.crazygames.com;
-              frame-src 'self' https://*.crazygames.com;
-              img-src 'self' https://*.crazygames.com https://imgs.crazygames.com data:;
+              script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.crazygames.com https://*.smashkarts.io https://smashkarts.io;
+              frame-src 'self' https://*.crazygames.com https://*.smashkarts.io https://smashkarts.io;
+              img-src 'self' https://*.crazygames.com https://imgs.crazygames.com https://*.smashkarts.io https://smashkarts.io data:;
               style-src 'self' 'unsafe-inline';
-              connect-src 'self' https://*.crazygames.com;
-              media-src 'self' https://*.crazygames.com;
+              connect-src 'self' https://*.crazygames.com https://*.smashkarts.io https://smashkarts.io;
+              media-src 'self' https://*.crazygames.com https://*.smashkarts.io https://smashkarts.io;
               worker-src 'self' blob:;
               child-src 'self' blob:;
               frame-ancestors 'self' https://*.farcaster.xyz https://*.warpcast.com;
@@ -31,9 +31,9 @@ const nextConfig: NextConfig = {
     ];
   },
   
-  // Configure image domains to allow images from crazygames
+  // Configure image domains to allow images from crazygames and smashkarts
   images: {
-    domains: ['img.crazygames.com', 'imgs.crazygames.com', 'www.crazygames.com'],
+    domains: ['img.crazygames.com', 'imgs.crazygames.com', 'www.crazygames.com', 'smashkarts.io'],
   },
   
   // Ensure we can properly handle the Farcaster Frame SDK

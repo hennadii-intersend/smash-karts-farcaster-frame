@@ -3,11 +3,10 @@
 import dynamic from "next/dynamic";
 
 /**
- * Dynamically import the GameFrame component with SSR disabled.
- * This is necessary because the Farcaster Frame SDK uses browser-only APIs
- * that wouldn't work in a server-rendering context.
+ * Dynamically import the Simple Iframe component with SSR disabled.
+ * This is a lighter approach that might work better on iOS.
  */
-const GameFrame = dynamic(() => import("./GameFrame"), { 
+const SimpleIframe = dynamic(() => import("./simple-iframe"), { 
   ssr: false,
   loading: () => (
     <div className="flex items-center justify-center h-screen bg-black text-white">
@@ -20,13 +19,9 @@ const GameFrame = dynamic(() => import("./GameFrame"), {
 });
 
 /**
- * Game page container that hosts the Smash Karts game frame.
- * Uses a full-screen black background to match the game's aesthetic.
+ * Game page container that hosts the Smash Karts game iframe.
+ * Uses a simpler approach for better iOS compatibility.
  */
 export default function GamePage() {
-  return (
-    <div className="h-screen w-full bg-black overflow-hidden">
-      <GameFrame />
-    </div>
-  );
+  return <SimpleIframe />;
 }

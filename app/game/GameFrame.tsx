@@ -73,11 +73,10 @@ export default function GameFrame() {
       {/* Game iframe */}
 <iframe
   ref={iframeRef}
-  src="https://www.crazygames.com/embed/smash-karts"
+  src="https://smashkarts.io/"
   className="w-full h-full border-none"
   allow="accelerometer; autoplay; camera; clipboard-write; encrypted-media; fullscreen; gamepad; gyroscope; microphone; picture-in-picture; web-share; xr-spatial-tracking"
   allowFullScreen
-  sandbox="allow-scripts allow-same-origin allow-popups allow-presentation allow-orientation-lock"
   onLoad={handleIframeLoad}
 ></iframe>
 
