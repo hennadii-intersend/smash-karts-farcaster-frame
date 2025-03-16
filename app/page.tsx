@@ -1,4 +1,16 @@
 import Link from "next/link";
+import { Metadata } from "next";
+
+// Frame metadata for direct HTML access
+export const metadata: Metadata = {
+  title: "Smash Karts Frame Game",
+  description: "Play Smash Karts directly in your Farcaster feed",
+  openGraph: {
+    title: "Smash Karts - Farcaster Frame Game",
+    description: "Drive and shoot your way to victory in this multiplayer kart battle game!",
+    images: ['/image.png'],
+  },
+};
 
 export default function Home() {
   return (
@@ -32,16 +44,43 @@ export default function Home() {
           </ul>
         </div>
         
-        {/* Play Button */}
-        <Link 
-          href="/game" 
-          className="mt-4 px-10 py-4 bg-indigo-600 hover:bg-indigo-500 transition-all rounded-full font-bold text-xl shadow-xl hover:shadow-indigo-500/25 hover:scale-105 flex items-center gap-2 group"
-        >
-          Play Now
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
-        </Link>
+        {/* Play Buttons */}
+        <div className="flex flex-col md:flex-row gap-4">
+          <Link 
+            href="/game" 
+            className="px-10 py-4 bg-indigo-600 hover:bg-indigo-500 transition-all rounded-full font-bold text-xl shadow-xl hover:shadow-indigo-500/25 hover:scale-105 flex items-center gap-2 group"
+          >
+            Play with React
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
+          
+          <Link 
+            href="/direct-game.html" 
+            className="px-10 py-4 bg-purple-600 hover:bg-purple-500 transition-all rounded-full font-bold text-xl shadow-xl hover:shadow-purple-500/25 hover:scale-105 flex items-center gap-2 group"
+          >
+            Play with HTML
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
+        </div>
+        
+        {/* Frame Info Box */}
+        <div className="mt-8 p-6 bg-white/10 rounded-xl backdrop-blur-sm max-w-2xl">
+          <h2 className="text-2xl font-bold mb-4">Testing Farcaster Frame</h2>
+          <p className="mb-4">
+            This example shows how to embed games in Farcaster using two approaches:
+          </p>
+          <ul className="list-disc list-inside space-y-2 mb-4">
+            <li><strong>React approach:</strong> Uses Next.js components and the Farcaster SDK</li>
+            <li><strong>HTML approach:</strong> Uses direct HTML with proper Frame metadata for iOS compatibility</li>
+          </ul>
+          <p>
+            If you're seeing issues with the game not loading in iOS, try the HTML approach which uses a simpler implementation.
+          </p>
+        </div>
       </main>
       
       <footer className="mt-16 mb-4 text-sm opacity-75 text-center">
